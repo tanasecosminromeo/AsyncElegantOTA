@@ -55,7 +55,7 @@ void AsyncElegantOtaClass::begin(AsyncWebServer *server, const char* username, c
         response->addHeader("Connection", "close");
         response->addHeader("Access-Control-Allow-Origin", "*");
         request->send(response);
-        restart();
+        //restart();
     }, [&](AsyncWebServerRequest *request, String filename, size_t index, uint8_t *data, size_t len, bool final) {
         //Upload handler chunks in data
         if(_authRequired){
